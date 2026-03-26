@@ -12,6 +12,7 @@ Vi valde bort NoSQL eftersom vår data är tydligt strukturerad och innehåller 
 
 ## Databasstruktur
 Databasen består av följande tabeller:
+
 ● Elever
 ● Instruktörer
 ● Lektioner
@@ -28,6 +29,7 @@ Tabellerna är kopplade med primärnycklar (PK) och främmande nycklar (FK).
 
 ## Funktionalitet
 Databasen innehåller:
+
 ● Bokningar av lektioner
 ● Uppdatering av bokningsstatus (t.ex. avbokad)
 ● Visar bokningar med JOIN-frågor
