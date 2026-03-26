@@ -14,41 +14,64 @@ Vi valde bort NoSQL eftersom vår data är tydligt strukturerad och innehåller 
 Databasen består av följande tabeller:
 
 ● Elever
+
 ● Instruktörer
+
 ● Lektioner
+
 ● Bokningar
+
 ● Bokningslogg
+
 Tabellerna är kopplade med primärnycklar (PK) och främmande nycklar (FK).
 
 ## Relationer
 ● En elev kan ha flera bokningar
+
 ● En instruktör kan ha flera bokningar
+
 ● En lektion kan bokas flera gånger
+
 ● Bokningar kopplar ihop elever, instruktörer och lektioner med hjälp av främmande nycklar
+
 ● Tabellen bokningslogg används för att registrera händelser i databasen när en ny bokning skapas via en trigger
 
 ## Funktionalitet
 Databasen innehåller:
 
 ● Bokningar av lektioner
+
 ● Uppdatering av bokningsstatus (t.ex. avbokad)
+
 ● Visar bokningar med JOIN-frågor
+
 ● Visar statistik med GROUP BY (t.ex. antal bokningar per instruktör)
+
 ● Stored procedure för att hämta bokningar per elev
+
 ● TRIGGER som loggar när en ny bokning skapas
+
 ● TRIGGER som förhindrar dubbelbokningar genom att kontrollera att en instruktör inte bokas flera gånger vid samma tid.
+
 ● Enkel hemsida som användargränssnitt för att hantera bokningar
 
 ## Dataintegritet
 ● NOT NULL för att säkerställa att viktiga fält alltid fylls i
+
 ● UNIQUE för att undvika dubbletter (t.ex. email)
+
 ● CHECK för att validera värden (t.ex. status och pris > 0)
+
 ● DEFAULT -värden (t.ex. status = ‘Bokad’)
+
 ● FOREIGN KEY för att säkerställa korrekta relationer mellan tabellerna
+
 ● TRIGGER som hjälper till att förhindra felaktiga bokningar
 
 ## Prestanda och säkerhet
+
 ● Index för snabbare sökningar
+
 ● Användare och rättigheter (GRANT/REVOKE) för att styra åtkomst
 
 ## Vidareutveckling
